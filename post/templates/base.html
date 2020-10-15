@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title> </title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="header-logo">
+                        <a href="/">Blog</a>
+                    </div>
+        
+                    <nav class="nav">
+                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="#">News</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+    </body>
+</html>
