@@ -7,14 +7,17 @@ body {
 	color: #000000;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
 }
 
-p {
-	margin: 0;
-	padding: 0;
+.container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
 }
 
 /* header */
@@ -92,25 +95,27 @@ p {
 
 /* intro */
 
-.intro h1 {
+.intro {
+	text-align: center;
+	
+	width: 100%;
+	height: 100vh;
+
+	background-image: url("../img/header.jpg");
+	background-position: center 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #73d360;
+}
+
+.intro-title {
+	margin: 300px 0 0 0;
 	font-family: 'Lora', serif;
 	font-size: 36px;
 	font-weight: 500;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #ffffff;
-}
-
-.intro {
-	width: 100%;
-	padding-top: 250px;
-	padding-bottom: 250px;
-	text-align: center;
-	background-image: url("../img/header.jpg");
-	background-position: center 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: #73d360;
 }
 
 .intro-detail {
@@ -125,13 +130,48 @@ p {
 	background-color: #73d360;
 }
 
-/* content */
-
-.container {
-	width: 1000px;
-	margin: 0 auto;
-	padding: 10px;
+.btn {
+	cursor: pointer;
 }
+
+.btn-random {
+	display: inline-block;
+	margin-top: 150px;
+
+	font-family: 'Jost', sans-serif;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 20px 40px;
+	border: 5px solid #7fb37d;
+	background-color: transparent;
+	color: #7fb37d;
+	transition: border .4s linear, color .4s linear;
+}
+
+.btn-random:hover {
+	font-size: 18px;
+	padding: 21px 41px;
+	border: 5px solid #ffffff;
+	background-color: transparent;
+	color: #ffffff;
+}
+
+.btn-random:active {
+	font-size: 18px;
+	padding: 21px 41px;
+	border: 5px solid #7fb37d;
+	background-color: transparent;
+	color: #7fb37d;
+}
+
+/* элемент с id="max_value" нужен, чтобы узнать количество записей на сайте, но отображать его на странице не нужно */
+#max-value {
+	display: none;
+}
+
+/* content */
 
 .post-date {
 	margin-bottom: 20px;

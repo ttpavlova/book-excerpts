@@ -9,8 +9,11 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 def bookshome(request):
+    # count - кол-во записей
+    count=Post.objects.all().count()
     content={
-        "title":"Домашняя страница книг"
+        "title":"Домашняя страница",
+        "count":count,
     }
     return render(request, "index.html", content)
     
@@ -25,7 +28,13 @@ def booksdetail(request, pk):
 def bookslist(request):
     querybook=Post.objects.all
     content={
-        "title":"Список книг",
+        "title":"Список публикаций",
         "object_list":querybook,
     }
-    return render(request, "index.html", content)
+    return render(request, "bookslist.html", content)
+    
+def about(request):
+    content={
+        "title":"Описание ресурса",
+    }
+    return render(request, "about.html", content)

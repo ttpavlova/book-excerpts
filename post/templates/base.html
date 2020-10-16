@@ -1,4 +1,7 @@
+<!-- база страниц; общий header -->
+
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -14,14 +17,13 @@
             <div class="container">
                 <div class="header-inner">
                     <div class="header-logo">
-                        <a href="/">Blog</a>
+                        <a href="/">Books</a>
                     </div>
         
                     <nav class="nav">
-                        <a class="nav-link active" href="#">Home</a>
-                        <a class="nav-link" href="#">News</a>
-                        <a class="nav-link" href="#">About</a>
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link active" href="http://127.0.0.1:8000/">Home</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/list/">Full List</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/about/">About</a>
                     </nav>
                 </div>
             </div>
@@ -31,6 +33,6 @@
             {% block content %}
             {% endblock content %}
         </div>
-
+        <script src="../static/js/activity.js"></script>
     </body>
 </html>

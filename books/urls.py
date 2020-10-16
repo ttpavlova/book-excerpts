@@ -20,11 +20,12 @@ from post.views import (
     bookshome,
     booksdetail,
     bookslist,
+    about,
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('post.urls')),
-    path ('books/', include('post.urls')),
-    path ('detail/', include('post.urls')),
+    path ('list/', include('post.urls')),
+    path ('about/', include('post.urls')),
 ]
