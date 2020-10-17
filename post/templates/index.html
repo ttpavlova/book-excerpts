@@ -4,13 +4,29 @@
 
 {% block content %}
 
-<div class="intro">
-	<div class="container">
-		<h1 class="intro-title">Welcome</h1>
-		<a class="btn btn-random" onclick="moveToRandomPage()">Выбрать</a>
+<header class="intro">
+	<div class="intro-container">
+		<div class="intro-inner">
+			<h1 class="intro-title">Welcome</h1>
+			<h2 class="intro-description">Click button below to get random result.</h2>
+			<a class="btn btn-random" onclick="moveToRandomPage()">Выбрать</a>
+		</div>
 	</div>
+</header>
+
+<div class="background">
+	<canvas id="canvas-one"></canvas>
+	
 </div>
 
 <p id="max-value">{{count}}</p>
+
+<script>
+	(document.getElementById("nav-home")).classList.add("active");
+</script>
+
+<script src="../static/js/pixi.min_5.0.2.js"></script>
+
+<script src="../static/js/activity-pixi-js.js"></script>
 
 {% endblock content %}
