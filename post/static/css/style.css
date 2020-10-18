@@ -154,40 +154,164 @@ h1, h2, h3, h4, h5, h6, p {
 	background-color: #73d360;
 }
 
+/* стилизация кнопок */
+
 .btn {
-	cursor: pointer;
-}
-
-.btn-random {
 	display: inline-block;
-
 	font-family: 'Jost', sans-serif;
 	text-align: center;
 	font-size: 16px;
 	font-weight: 500;
 	text-transform: uppercase;
 	padding: 20px 40px;
-	border: 5px solid #7fb37d;
-	background-color: transparent;
-	color: #7fb37d;
-	transition: border .4s linear, color .4s linear;
+	cursor: pointer;
 }
 
-.btn-random:hover {
-	font-size: 18px;
-	padding: 21px 41px;
-	border: 5px solid #e9e269;
-	background-color: transparent;
-	color: #e9e269;
+.btn-random {
+	position: relative;
+	color: #ffffff;
+	overflow: hidden;
+}
+
+.btn-detail {
+	margin-top: 50px;
+	border: 2px solid #73d360;
+}
+
+.btn-detail:hover {
+	background-color: #d3f1cd;
 }
 
 .btn-random:active {
-	font-size: 18px;
-	padding: 21px 41px;
-	border: 5px solid #7fb37d;
-	background-color: transparent;
-	color: #7fb37d;
+	background: rgba(255, 255, 255, 0.4);
 }
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-container {
+	position: relative;
+	margin: 0 auto;
+	width: 154.34px;
+	height: 64px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, .1);
+	box-shadow: 0 5px 5px rgba(255, 255, 255, .2);
+}
+
+/* стилизация бликов на кнопке */
+
+.btn-random::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(135deg, transparent, rgba(255, 255, 255, .1), transparent); */
+
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, transparent 50%);
+    transform: skew(-45deg);
+
+    transition: 2s;
+}
+
+.btn-random:hover::after {
+    left: 150%;
+}
+
+/* анимация рамки */
+
+.btn-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+.btn-container:hover::before {
+	animation: animate 1s linear forwards;
+	animation-delay: 1s;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #ffffff;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: #ffffff;
+        border-right-color: #ffffff;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: #ffffff;
+        border-right-color: #ffffff;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+.btn-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+.btn-container:hover::after {
+    animation: animate2 1s linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #ffffff;
+        border-left-color: transparent;
+    }
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+}
+
+
 
 /* элемент с id="max_value" нужен, чтобы узнать количество записей на сайте, но отображать его на странице не нужно */
 #max-value {

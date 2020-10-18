@@ -19,9 +19,11 @@ def bookshome(request):
     
 def booksdetail(request, pk):
     instance=get_object_or_404(Post, pk=pk)
+    count=Post.objects.all().count()
     content={
         "title":instance.title,
         "instance":instance,
+        "count":count,
     }
     return render(request, "booksdetail.html", content)
     

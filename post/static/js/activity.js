@@ -19,5 +19,5 @@ function getRandomIntInclusive(min, max) {
 // функция перехода на рандомную статью
 function moveToRandomPage() {
     let random_number = getRandomIntInclusive(min_value, max_value);
-    document.location.href = "../list/" + random_number + "/";
+    document.location.href = "http://127.0.0.1:8000/list/" + random_number + "/";
 }
