@@ -171,6 +171,7 @@ h1, h2, h3, h4, h5, h6, p {
 	position: relative;
 	color: #ffffff;
 	overflow: hidden;
+	z-index: 100;
 }
 
 .btn-detail {
