@@ -2,12 +2,12 @@ let app = new PIXI.Application({width: window.innerWidth, height: window.innerHe
 
 document.body.appendChild(app.view);
 
-let img = new PIXI.Sprite.from("http://127.0.0.1:8000/static/img/header.jpg");
+let img = new PIXI.Sprite.from("/static/img/header.jpg");
 img.width = window.innerWidth;
 img.height = window.innerHeight;
 app.stage.addChild(img);
 
-deptMap = new PIXI.Sprite.from("http://127.0.0.1:8000/static/img/header-9-map.jpg");
+deptMap = new PIXI.Sprite.from("/static/img/header-9-map.jpg");
 app.stage.addChild(deptMap);
 
 displacementFilter = new PIXI.filters.DisplacementFilter(deptMap);
