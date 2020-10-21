@@ -46,6 +46,21 @@ h1, h2, h3, h4, h5, h6, p {
     color: #ffffff;
 }
 
+.header.fixed {
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+
+    background-image: url("../img/header.jpg");
+	background-position: center 100%;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #4a6447;
+}
+
 /* navigation */
 
 .nav {
@@ -91,6 +106,55 @@ h1, h2, h3, h4, h5, h6, p {
 
 .nav-link.active {
     color: #ffffff;
+}
+
+/* nav-toggle */
+
+.nav-toggle {
+    display: none;
+    width: 30px;
+    padding: 10px 0;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 0;
+    color: transparent;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav-toggle-item {
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: #ffffff;
+}
+
+.nav-toggle-item::before,
+.nav-toggle-item::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-toggle-item::before {
+    top: -5px;
+}
+
+.nav-toggle-item::after {
+    top: 5px;
 }
 
 /* intro */
@@ -153,7 +217,7 @@ h1, h2, h3, h4, h5, h6, p {
 	background-position: center 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-color: #73d360;
+	background-color: #4a6447;
 }
 
 /* стилизация кнопок */
@@ -398,14 +462,53 @@ canvas {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .nav-link {
-        margin: 0 10px;
+@media screen and (max-width: 770px) {  
+    .header {
+        padding-top: 10px;
     }
-}
 
-@media screen and (max-width: 320px) {
+    .nav {
+        display: none;
+
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #4a6447;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
     .nav-link {
-        margin: 0 5px;
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+    }
+
+    .nav-link::after {
+        content: "";
+        display: block;
+        width: 30%;
+        height: 3px;
+        background-color: #ffffff;
+        opacity: 0;
+    
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    
+        transition: opacity .1s linear;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .intro-detail {
+        padding-bottom: 20px;
     }
 }

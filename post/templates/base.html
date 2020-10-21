@@ -14,18 +14,21 @@
     </head>
     <body>
 
-        <header class="header">
+        <header class="header" id="header">
             <div class="container">
                 <div class="header-inner">
                     <div class="header-logo">
                         <a href="/">Books</a>
                     </div>
         
-                    <nav class="nav">
+                    <nav class="nav" id="nav">
                         <a id="nav-home" class="nav-link" href="http://127.0.0.1:8000/">Home</a>
                         <a id="nav-list" class="nav-link" href="http://127.0.0.1:8000/list/">Full List</a>
                         <a id="nav-about" class="nav-link" href="http://127.0.0.1:8000/about/">About</a>
                     </nav>
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span class="nav-toggle-item">Menu</span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -35,6 +38,8 @@
             {% block content %}
             {% endblock content %}
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <script src="http://127.0.0.1:8000/static/js/activity.js"></script>
     </body>
 </html>

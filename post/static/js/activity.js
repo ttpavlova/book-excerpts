@@ -21,3 +21,53 @@ function moveToRandomPage() {
     let random_number = getRandomIntInclusive(min_value, max_value);
     document.location.href = "http://127.0.0.1:8000/list/" + random_number + "/";
 }
+
+// jquery
+
+$(function() {
+    var header = $("#header"),
+        introL = $("#intro-detail-list").innerHeight(),
+        introP = $("#intro-detail-post").innerHeight(),
+        introA = $("#intro-detail-about").innerHeight(),
+        scrollOffset = $(window).scrollTop();
+
+    // fixed header
+
+    checkScroll(scrollOffset);
+
+    $(window).on("scroll", function() {
+        scrollOffset = $(this).scrollTop();
+
+        checkScroll(scrollOffset);
+    });
+
+    function checkScroll(scrollOffset) {     
+        if ((scrollOffset >= introL) || (scrollOffset >= introP) || (scrollOffset >= introA)) {
+            header.addClass("fixed");
+        }
+        else {
+            header.removeClass("fixed");
+        }
+    }
+
+    // smooth scroll
+
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+
+        var blockId = $(this).data("scroll"),
+            blockOffset = $(blockId).offset().top;
+
+        $("html, body").animate({
+            scrollTop: blockOffset
+        }, 500);
+    });
+
+    // menu nav toggle
+
+    $("#nav-toggle").on("click", function(event) {
+        event.preventDefault();
+
+        $("#nav").toggleClass("active");
+    });
+});
