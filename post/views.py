@@ -24,6 +24,7 @@ def booksdetail(request, pk):
         "title":instance.title,
         "instance":instance,
         "count":count,
+        "author":instance.author,
     }
     return render(request, "booksdetail.html", content)
     

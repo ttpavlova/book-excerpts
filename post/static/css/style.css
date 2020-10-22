@@ -150,11 +150,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .nav-toggle-item::before {
-    top: -5px;
+    top: -6px;
 }
 
 .nav-toggle-item::after {
-    top: 5px;
+    top: 6px;
 }
 
 /* intro */
@@ -426,9 +426,42 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .post-text {
-	margin: 0;
+	margin: 0 0 50px 0;
 	padding: 0;
 	text-align: justify;
+}
+
+.post-text.hidden {
+    display: none;
+}
+
+.post-lang {
+    margin: 0 0 20px 0;
+}
+
+.lang-link {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #9e9e9e;
+    transition: color .1s linear;
+    cursor: pointer;
+}
+
+.lang-link:hover {
+    color: #5a5a5a;
+}
+
+.post-author {
+    margin: 0;
+	padding: 0;
+    text-align: justify;
+    font-style: italic;
+}
+
+.post-author.hidden {
+    display: none;
 }
 
 /* background и canvas содержат стили для корректного отображения фонового изображения на главной странице */

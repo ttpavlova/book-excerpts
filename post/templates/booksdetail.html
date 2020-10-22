@@ -13,11 +13,32 @@
 		<div class="post-date">
 			{{instance.tpublish}}
 		</div>
-		<h2 class="post-title">{{title}}</h2>
-		<div class="post-text">
+		<!-- en -->
+		<h2 id="post-title-en" class="post-title">{{title}}</h2>
+		<!-- ru -->
+		<!-- <h2 id="post-title-ru" class="post-title">{{title_ru}}</h2> -->
+		<div class="post-lang">
 			<p>
-				{{instance.content|linebreaksbr}}
-			</p>
+				<a class="lang-link" onclick="changeLangForEn()">en</a>	|	<a class="lang-link" onclick="changeLangForRu()">ru</a>
+			</p>			
+		</div>
+
+		<!-- en -->
+		<div id="post-text-en" class="post-text">
+			{{instance.content|linebreaksbr}}
+		</div>
+		<!-- ru -->
+		<div id="post-text-ru" class="post-text">
+			{{instance.content_ru|linebreaksbr}}
+		</div>
+
+		<!-- en -->
+		<div id="post-author-en" class="post-author">
+			{{instance.author}}
+		</div>
+		<!-- ru -->
+		<div id="post-author-ru" class="post-author">
+			{{instance.author_ru}}
 		</div>
 		<a class="btn btn-detail" onclick="moveToRandomPage()">Выбрать</a>
 	</div>

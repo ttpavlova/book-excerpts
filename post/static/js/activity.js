@@ -22,6 +22,42 @@ function moveToRandomPage() {
     document.location.href = "/list/" + random_number + "/";
 }
 
+// change post language
+
+element_text_en = document.getElementById("post-text-en");
+element_text_ru = document.getElementById("post-text-ru");
+element_author_en = document.getElementById("post-author-en");
+element_author_ru = document.getElementById("post-author-ru");
+
+// hide text and author in russian when page downloads
+element_text_ru.classList.add("hidden");
+element_author_ru.classList.add("hidden");
+
+function changeLangForEn() {
+    
+    if (element_text_en.classList.contains("hidden")) {
+        // change text language
+        element_text_en.classList.remove("hidden");
+        element_text_ru.classList.add("hidden");
+
+        // change author language
+        element_author_en.classList.remove("hidden");
+        element_author_ru.classList.add("hidden");
+    }
+}
+
+function changeLangForRu() {
+    if (element_text_ru.classList.contains("hidden")) {
+        // change text language
+        element_text_ru.classList.remove("hidden");
+        element_text_en.classList.add("hidden");
+
+        // change author language
+        element_author_ru.classList.remove("hidden");
+        element_author_en.classList.add("hidden");
+    }
+}
+
 // jquery
 
 $(function() {
