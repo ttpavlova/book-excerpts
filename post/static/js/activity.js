@@ -29,10 +29,6 @@ element_text_ru = document.getElementById("post-text-ru");
 element_author_en = document.getElementById("post-author-en");
 element_author_ru = document.getElementById("post-author-ru");
 
-// hide text and author in russian when page downloads
-element_text_ru.classList.add("hidden");
-element_author_ru.classList.add("hidden");
-
 function changeLangForEn() {
     
     if (element_text_en.classList.contains("hidden")) {

@@ -40,8 +40,14 @@
 		<div id="post-author-ru" class="post-author">
 			{{instance.author_ru}}
 		</div>
-		<a class="btn btn-detail" onclick="moveToRandomPage()">Выбрать</a>
+		<a class="btn btn-detail" onclick="moveToRandomPage()">Generate More</a>
 	</div>
 </div>
+
+<!-- прячем текст на русском при загрузке страницы -->
+<script>
+	document.getElementById("post-text-ru").classList.add("hidden");
+    document.getElementById("post-author-ru").classList.add("hidden");
+</script>
 
 {% endblock content %}

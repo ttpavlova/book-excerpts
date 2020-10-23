@@ -240,6 +240,10 @@ h1, h2, h3, h4, h5, h6, p {
 	z-index: 100;
 }
 
+.btn-random:active {
+	background: rgba(255, 255, 255, 0.4);
+}
+
 .btn-detail {
 	margin-top: 50px;
 	border: 2px solid #73d360;
@@ -249,8 +253,8 @@ h1, h2, h3, h4, h5, h6, p {
 	background-color: #d3f1cd;
 }
 
-.btn-random:active {
-	background: rgba(255, 255, 255, 0.4);
+.btn-detail:active {
+    background-color: #e5ffe0;
 }
 
 *, *::before, *::after {
@@ -262,7 +266,7 @@ h1, h2, h3, h4, h5, h6, p {
 .btn-container {
 	position: relative;
 	margin: 0 auto;
-	width: 154.34px;
+	width: 164.65px;
 	height: 64px;
 	overflow: hidden;
 	background: rgba(255, 255, 255, .1);
