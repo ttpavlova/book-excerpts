@@ -40,10 +40,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header-logo a {
-    font-size: 30px;
-	font-weight: 700;
-	text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+    text-decoration: none;
     color: #ffffff;
+    text-shadow: rgb(50, 53, 49) 2px 2px 1px;
 }
 
 .header.fixed {
