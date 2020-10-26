@@ -40,11 +40,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header-logo a {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Rochester', cursive;
     font-size: 26px;
     text-decoration: none;
     color: #ffffff;
+    
     text-shadow: rgb(50, 53, 49) 2px 2px 1px;
+}
+
+.header-logo.home a {
+    background-color: rgba(30, 100, 20, .2);
 }
 
 .header.fixed {
@@ -195,7 +200,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .intro-description {
-	margin-bottom: 130px;
+	/* margin-bottom: 130px; */
 	font-size: 16px;
 	font-weight: 400;
 	color: #d3d3d3;
@@ -214,11 +219,17 @@ h1, h2, h3, h4, h5, h6, p {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	text-align: center;
-	background-image: url("../img/header.jpg");
+    background-image: url("../img/header.jpg");
 	background-position: center 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: #4a6447;
+}
+
+.darker-container {
+    padding: 30px 10px;
+    box-shadow: 2px 10px 20px 1px rgba(0, 0, 0, .2);
+    background-color: rgba(30, 100, 20, .2);
 }
 
 /* стилизация кнопок */
@@ -246,12 +257,22 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .btn-detail {
-	margin-top: 50px;
-	border: 2px solid #73d360;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    background-color: #d3f1cd;
+    /* background-color: #afe9a3; */
+    border: 2px solid #73d360;
+    z-index: 100;
 }
 
 .btn-detail:hover {
-	background-color: #d3f1cd;
+    /* background-color: #73d360; */
+    /* background-color: #bbe2b3; */
+    background-color: #d2faca;
+    /* background-color: #a5eb97; */
+    /* background-color: #9ae98a; */
 }
 
 .btn-detail:active {
@@ -266,7 +287,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .btn-container {
 	position: relative;
-	margin: 0 auto;
+    margin: 0 auto;
+    margin-top: 100px;
 	width: 164.65px;
 	height: 64px;
 	overflow: hidden;
@@ -291,6 +313,24 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .btn-random:hover::after {
+    left: 150%;
+}
+
+.btn-detail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, transparent 50%);
+    transform: skew(-45deg);
+
+    transition: 2s;
+}
+
+.btn-detail:hover::after {
     left: 150%;
 }
 
@@ -503,6 +543,10 @@ canvas {
 @media screen and (max-width: 770px) {  
     .header {
         padding-top: 10px;
+    }
+
+    .header-logo a {
+        background-color: rgba(30, 100, 20, .8);
     }
 
     .nav {
