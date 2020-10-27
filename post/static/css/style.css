@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header-logo.home a {
-    background-color: rgba(30, 100, 20, .2);
+    background-color: rgba(74, 100, 71, 0.3);
 }
 
 .header.fixed {
@@ -183,8 +183,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .intro-container {
 	width: 100%;
-	max-width: 600px;
-	margin: 0 auto;
+	max-width: 1150px;
+    margin: 0 auto;
 	padding: 10px;
 	text-align: center;
 }
@@ -193,7 +193,8 @@ h1, h2, h3, h4, h5, h6, p {
 	margin-bottom: 20px;
 	font-family: 'Lora', serif;
 	font-size: 36px;
-	font-weight: 500;
+    font-weight: 500;
+    line-height: 1;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #ffffff;
@@ -208,8 +209,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .intro-inner {
     width: 100%;
-    max-width: 880px;
-    margin: 0 auto;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: 0;
 
     text-align: center;
 }
@@ -224,12 +226,6 @@ h1, h2, h3, h4, h5, h6, p {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: #4a6447;
-}
-
-.darker-container {
-    padding: 30px 10px;
-    box-shadow: 2px 10px 20px 1px rgba(0, 0, 0, .2);
-    background-color: rgba(30, 100, 20, .2);
 }
 
 /* стилизация кнопок */
@@ -261,22 +257,19 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 50px;
     margin-bottom: 50px;
     overflow: hidden;
-    background-color: #d3f1cd;
-    /* background-color: #afe9a3; */
-    border: 2px solid #73d360;
+    /* исходный цвет - #6c8b69 */
+    border: 2px solid #91ba8d;
+
     z-index: 100;
 }
 
 .btn-detail:hover {
-    /* background-color: #73d360; */
-    /* background-color: #bbe2b3; */
-    background-color: #d2faca;
-    /* background-color: #a5eb97; */
-    /* background-color: #9ae98a; */
+    background-color: #91ba8d;
+    color: #ffffff;
 }
 
 .btn-detail:active {
-    background-color: #e5ffe0;
+    background-color: #a7d4a3;
 }
 
 *, *::before, *::after {
@@ -313,24 +306,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .btn-random:hover::after {
-    left: 150%;
-}
-
-.btn-detail::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -150%;
-    width: 100%;
-    height: 100%;
-
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, transparent 50%);
-    transform: skew(-45deg);
-
-    transition: 2s;
-}
-
-.btn-detail:hover::after {
     left: 150%;
 }
 
@@ -517,7 +492,7 @@ h1, h2, h3, h4, h5, h6, p {
 	width: 100%;
 	height: 100vh;
 
-	background-image: url("../img/header.jpg");
+	background-image: url("../img/header_darker_gradient.jpg");
 	background-position: center 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -538,6 +513,10 @@ canvas {
     canvas {
         display: none;
     }
+
+    .intro-inner {
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 770px) {  
@@ -546,7 +525,7 @@ canvas {
     }
 
     .header-logo a {
-        background-color: rgba(30, 100, 20, .8);
+        background-color: rgba(74, 100, 71, 0.9);
     }
 
     .nav {
