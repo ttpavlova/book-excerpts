@@ -569,6 +569,10 @@ canvas {
         display: block;
     }
 
+    .intro {
+        top: 60%;
+    }
+
     .intro-detail {
         padding-bottom: 20px;
     }
