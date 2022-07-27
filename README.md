@@ -13,9 +13,29 @@ You can try the demo at http://bookexcerpts.pythonanywhere.com/
 
 # Overview
 
+# Build
+
+To build and run this project locally, you'll need Python and Django installed on your computer. The versions that were used in this project are Python 3.9 and Django 1.9.
+From your command line:
+```
+# clone this repository
+$ git clone https://github.com/ttpavlova/book-excerpts.git
+```
+
+First of all, you need to set up a virtual environment. It will isolate your Python/Django setup for each project. This means that any changes you make to one website won't affect any others you're also developing.
+```
+# install and start virtualenv
+> C:\Python39\Scripts> pip install virtualenv
+> C:\Python39\Scripts> virtualenv project01
+> C:\Python39\Scripts> cd project01
+> C:\Python39\Scripts\project01> cd scripts
+> C:\Python39\Scripts\project01\Scripts> activate
+(project01) > C:\Python39\Scripts\project01\Scripts>
+```
 
 
 # Credits
+
 PixiJS — The HTML5 Creation Engine https://pixijs.com/
 
-Online course from ITMO University «Программирование и разработка веб-приложений. Часть 2» https://openedu.ru/course/ITMOUniversity/PWADEV2/
+Online course from ITMO University «Программирование и разработка веб-приложений» https://openedu.ru/course/ITMOUniversity/PWADEV/
