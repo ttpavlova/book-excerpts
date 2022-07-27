@@ -38,12 +38,20 @@ First of all, you need to set up a virtual environment. It will isolate your Pyt
 
 # create a project 'books'
 (project01) > C:\Python39\Scripts\project01\Scripts> django-admin startproject books
-
+```
+Replace files in the 'books' folder with the cloned ones. 
+```
 # run server
 (project01) > C:\Python39\Scripts\project01\Scripts> cd books
 (project01) > C:\Python39\Scripts\project01\Scripts\books> python manage.py runserver
-```
 
+# create a db
+(project01) > C:\Python39\Scripts\project01\Scripts\books> python manage.py migrate
+
+# create superuser
+(project01) > C:\Python39\Scripts\project01\Scripts\books> python manage.py createsuperuser
+```
+Now you can access the admin panel at 127.0.0.1/admin/.
 
 # Credits
 
