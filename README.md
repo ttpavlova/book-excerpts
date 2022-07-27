@@ -15,7 +15,7 @@ You can try the demo at http://bookexcerpts.pythonanywhere.com/
 
 # Build
 
-To build and run this project locally, you'll need Python and Django installed on your computer. The versions that were used in this project are Python 3.9 and Django 1.9.
+To build and run this project locally, you'll need Python and Django installed on your computer. The versions that were used in this project are Python 3.9 and Django 3.1.
 From your command line:
 ```
 # clone this repository
@@ -34,7 +34,7 @@ First of all, you need to set up a virtual environment. It will isolate your Pyt
 > C:\Python39\Scripts\project01\Scripts> activate
 
 # install django
-(project01) > C:\Python39\Scripts\project01\Scripts> pip install django==1.9
+(project01) > C:\Python39\Scripts\project01\Scripts> pip install django==3.1
 
 # create a project 'books'
 (project01) > C:\Python39\Scripts\project01\Scripts> django-admin startproject books
