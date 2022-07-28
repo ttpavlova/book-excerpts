@@ -14,12 +14,13 @@
 			{{instance.tpublish}}
 		</div>
 		<!-- en -->
-		<h2 id="post-title-en" class="post-title">{{title}}</h2>
+		<h2 id="post-title-en" class="post-title">{{instance.title}}</h2>
 		<!-- ru -->
-		<!-- <h2 id="post-title-ru" class="post-title">{{title_ru}}</h2> -->
+		<h2 id="post-title-ru" class="post-title hidden">{{instance.title_ru}}</h2>
+
 		<div class="post-lang">
 			<p>
-				<a class="lang-link" onclick="changeLangForEn()">en</a>	|	<a class="lang-link" onclick="changeLangForRu()">ru</a>
+				<a class="lang-link" onclick="changeLangForEn()">en</a>	| <a class="lang-link" onclick="changeLangForRu()">ru</a>
 			</p>			
 		</div>
 
@@ -28,7 +29,7 @@
 			{{instance.content|linebreaksbr}}
 		</div>
 		<!-- ru -->
-		<div id="post-text-ru" class="post-text">
+		<div id="post-text-ru" class="post-text hidden">
 			{{instance.content_ru|linebreaksbr}}
 		</div>
 
@@ -37,17 +38,11 @@
 			{{instance.author}}
 		</div>
 		<!-- ru -->
-		<div id="post-author-ru" class="post-author">
+		<div id="post-author-ru" class="post-author hidden">
 			{{instance.author_ru}}
 		</div>
 		<a class="btn btn-detail" onclick="moveToRandomPage()">Generate More</a>
 	</div>
 </div>
-
-<!-- прячем текст на русском при загрузке страницы -->
-<script>
-	document.getElementById("post-text-ru").classList.add("hidden");
-    document.getElementById("post-author-ru").classList.add("hidden");
-</script>
 
 {% endblock content %}

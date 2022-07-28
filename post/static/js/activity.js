@@ -24,14 +24,20 @@ function moveToRandomPage() {
 
 // change post language
 
-element_text_en = document.getElementById("post-text-en");
-element_text_ru = document.getElementById("post-text-ru");
-element_author_en = document.getElementById("post-author-en");
-element_author_ru = document.getElementById("post-author-ru");
+let element_title_en = document.getElementById("post-title-en");
+let element_title_ru = document.getElementById("post-title-ru");
+let element_text_en = document.getElementById("post-text-en");
+let element_text_ru = document.getElementById("post-text-ru");
+let element_author_en = document.getElementById("post-author-en");
+let element_author_ru = document.getElementById("post-author-ru");
 
 function changeLangForEn() {
     
     if (element_text_en.classList.contains("hidden")) {
+        // change title languange
+        element_title_en.classList.remove("hidden");
+        element_title_ru.classList.add("hidden");
+
         // change text language
         element_text_en.classList.remove("hidden");
         element_text_ru.classList.add("hidden");
@@ -44,6 +50,10 @@ function changeLangForEn() {
 
 function changeLangForRu() {
     if (element_text_ru.classList.contains("hidden")) {
+        // change title languange
+        element_title_ru.classList.remove("hidden");
+        element_title_en.classList.add("hidden");
+
         // change text language
         element_text_ru.classList.remove("hidden");
         element_text_en.classList.add("hidden");

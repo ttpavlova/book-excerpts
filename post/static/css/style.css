@@ -427,6 +427,10 @@ h1, h2, h3, h4, h5, h6, p {
 	text-decoration: underline;
 }
 
+.post-title.hidden {
+    display: none;
+}
+
 .post-item {
 	margin: 50px 0 0 0;
 	text-align: center;	
