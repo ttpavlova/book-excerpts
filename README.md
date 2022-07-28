@@ -22,34 +22,36 @@ From your command line:
 $ git clone https://github.com/ttpavlova/book-excerpts.git
 ```
 
-First of all, you need to set up a virtual environment. It will isolate your Python/Django setup for each project. This means that any changes you make to one website won't affect any others you're also developing.
+First of all, you need to set up a virtual environment. It will isolate your Python/Django setup for each project. This means that any changes you make to one website won't affect any others you're also developing. In your Python\Scripts folder:
 ```
 # install virtualenv
-> C:\Python39\Scripts> pip install virtualenv
-
+...\> pip install virtualenv
+```
+To create a virtual environment for your project, open a new command prompt, navigate to the folder where you want to create your project and then enter the following:
+```
 # start virtualenv
-> C:\Python39\Scripts> virtualenv project01
-> C:\Python39\Scripts> cd project01
-> C:\Python39\Scripts\project01> cd scripts
-> C:\Python39\Scripts\project01\Scripts> activate
+...\> python -m venv project-name
+
+# activate the environment
+...\project-name\Scripts> activate
 
 # install django
-(project01) > C:\Python39\Scripts\project01\Scripts> pip install django==3.1
+(project-name) ...\project-name\Scripts> pip install django==3.1
 
 # create a project 'books'
-(project01) > C:\Python39\Scripts\project01\Scripts> django-admin startproject books
+(project-name) ...\project-name\Scripts> django-admin startproject books
 ```
 Replace files in the 'books' folder with the cloned ones. 
 ```
-# run server
-(project01) > C:\Python39\Scripts\project01\Scripts> cd books
-(project01) > C:\Python39\Scripts\project01\Scripts\books> python manage.py runserver
-
 # create a db
-(project01) > C:\Python39\Scripts\project01\Scripts\books> python manage.py migrate
+(project-name) ...\project-name\Scripts> cd books
+(project-name) ...\project-name\Scripts\books> python manage.py migrate
 
 # create superuser
-(project01) > C:\Python39\Scripts\project01\Scripts\books> python manage.py createsuperuser
+(project-name) ...\project-name\Scripts\books> python manage.py createsuperuser
+
+# run server
+(project-name) ...\project-name\Scripts\books> python manage.py runserver
 ```
 Now you can access the admin panel at 127.0.0.1/admin/.
 
