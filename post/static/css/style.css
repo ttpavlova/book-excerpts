@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, p {
     transform: translate3d(0, 0, 0);
     box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
 
-    background-image: url("../img/header.jpg");
+    background-image: url("../img/background.jpg");
 	background-position: center 100%;
 	background-repeat: no-repeat;
     background-size: cover;
@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6, p {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	text-align: center;
-    background-image: url("../img/header.jpg");
+    background-image: url("../img/background.jpg");
 	background-position: center 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -244,6 +244,8 @@ h1, h2, h3, h4, h5, h6, p {
 .btn-random {
 	position: relative;
 	color: #ffffff;
+    background-color: transparent;
+    border: none;
 	overflow: hidden;
 	z-index: 100;
 }
@@ -397,8 +399,6 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
-
-
 /* элемент с id="max_value" нужен, чтобы узнать количество записей на сайте, но отображать его на странице не нужно */
 #max-value {
 	display: none;
@@ -414,7 +414,7 @@ h1, h2, h3, h4, h5, h6, p {
 	color: #9e9e9e;
 }
 
-.post-title a, .post-title {
+.post-title a, .post-title, .about-title {
 	margin-bottom: 20px;
 	font-size: 24px;
 	font-weight: 500;
@@ -488,6 +488,20 @@ h1, h2, h3, h4, h5, h6, p {
     display: none;
 }
 
+/* about page */
+
+.about {
+    margin-top: 50px;
+}
+
+.about-texts {
+    text-align: justify;
+}
+
+.about-text {
+    margin: 20px 0;
+}
+
 /* background и canvas содержат стили для корректного отображения фонового изображения на главной странице */
 
 .background {
@@ -496,7 +510,7 @@ h1, h2, h3, h4, h5, h6, p {
 	width: 100%;
 	height: 100vh;
 
-	background-image: url("../img/header_darker_gradient.jpg");
+	background-image: url("../img/background_darker_gradient.jpg");
 	background-position: center 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
