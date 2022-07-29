@@ -12,6 +12,7 @@ You may even get inspiration and ideas for your own stories.
 You can try the demo at http://bookexcerpts.pythonanywhere.com/
 
 # Overview
+<img src="/gif/demo.gif" width="800" height="450"/>
 
 # Build
 
