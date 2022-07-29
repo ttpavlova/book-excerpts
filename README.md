@@ -12,9 +12,9 @@ You may even get inspiration and ideas for your own stories.
 You can try the demo at http://bookexcerpts.pythonanywhere.com/
 
 # Overview
-<img src="/gifs/demo-part1.gif" width="1000" height="562"/>
-<img src="/gifs/demo-part2.gif" width="1000" height="562"/>
-<img src="/gifs/demo-part3.gif" width="1000" height="562"/>
+![demo-part1.gif](https://github.com/ttpavlova/book-excerpts/blob/main/gifs/demo-part-1.gif)
+![demo-part2.gif](https://github.com/ttpavlova/book-excerpts/blob/main/gifs/demo-part-2.gif)
+![demo-part3.gif](https://github.com/ttpavlova/book-excerpts/blob/main/gifs/demo-part-3.gif)
 
 # Build
 
