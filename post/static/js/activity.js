@@ -1,23 +1,18 @@
-let min_value = 1, max_value = 0;
-
-// сначала посчитаем количество записей на сайте => оно запишется в переменную max_value
-countAmountOfPages();
-
-// функция получения количества статей на сайте
-function countAmountOfPages() {
-    max_value = document.getElementById("max-value").innerHTML;
+// get the number of articles on the site
+function getAmountOfPages() {
+    let max_value = document.getElementById("max-value").innerHTML;
     return max_value;
 }
 
-// функция для вычисления рандомного значения от min включительно до max включительно
+// get a random integer between two values, inclusive
 function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; // максимум и минимум включаются
+    return Math.floor(Math.random() * (max - min + 1)) + min; // the maximum and the minimum are inclusive
 }
 
-// функция перехода на рандомную статью
+// go to a random article
 function moveToRandomPage() {
+    let min_value = 1;
+    let max_value = getAmountOfPages();
     let random_number = getRandomIntInclusive(min_value, max_value);
     document.location.href = "/list/" + random_number + "/";
 }
@@ -86,14 +81,15 @@ function setHeaderToFixed() {
     }
 }
 
-// jquery
+// mobile menu
 
-$(function() {
-    // menu nav toggle
+let navToggle = document.getElementById("nav-toggle");
+let nav = document.getElementById("nav");
 
-    $("#nav-toggle").on("click", function(event) {
-        event.preventDefault();
-
-        $("#nav").toggleClass("active");
-    });
+navToggle.addEventListener("click", function(e) {
+    if (nav.classList.contains("active")) {
+        nav.classList.remove("active");
+    } else {
+        nav.classList.add("active");
+    }
 });
