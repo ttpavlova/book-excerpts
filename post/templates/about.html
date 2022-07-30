@@ -4,10 +4,6 @@
 
 {% block content %}
 
-<div class="intro-detail" id="intro-detail-about">
-	
-</div>
-
 <div class="about">
     <div class="container">
         <h2 class="about-title">About this website</h2>
@@ -21,7 +17,8 @@
 </div>
 
 <script>
-	(document.getElementById("nav-about")).classList.add("active");
+	document.getElementById("nav-about").classList.add("active");
+    document.getElementById("header").classList.add("with-bg");
 </script>
 
 {% endblock content %}

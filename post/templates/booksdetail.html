@@ -4,11 +4,7 @@
 
 {% block content %}
 
-<div class="intro-detail" id="intro-detail-post">
-	
-</div>
-
-<div class="post-item">
+<div class="post-item detailed">
 	<div class="container">
 		<div class="post-date">
 			{{instance.tpublish}}
@@ -44,5 +40,9 @@
 		<a class="btn btn-detail" onclick="moveToRandomPage()">Generate More</a>
 	</div>
 </div>
+
+<script>
+	document.getElementById("header").classList.add("with-bg");
+</script>
 
 {% endblock content %}

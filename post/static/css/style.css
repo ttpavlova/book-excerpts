@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6, p {
 	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 0 10px;
 	text-align: center;
 }
 
@@ -24,12 +24,12 @@ h1, h2, h3, h4, h5, h6, p {
 /* в header'е содержатся стили для центрирования элементов навигации и логотипа */
 
 .header {
-    width: 100%;
-	padding-top: 30px;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
     z-index: 100;
 }
 
@@ -52,19 +52,18 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: rgba(74, 100, 71, 0.3);
 }
 
-.header.fixed {
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    transform: translate3d(0, 0, 0);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
-
+.header.with-bg {
     background-image: url("../img/background.jpg");
 	background-position: center 100%;
 	background-repeat: no-repeat;
     background-size: cover;
     background-color: #4a6447;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+}
+
+.header.fixed {
+    height: 70px;
+    position: fixed;
 }
 
 /* navigation */
@@ -216,18 +215,6 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
 }
 
-.intro-detail {
-	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	text-align: center;
-    background-image: url("../img/background.jpg");
-	background-position: center 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: #4a6447;
-}
-
 /* стилизация кнопок */
 
 .btn {
@@ -257,7 +244,7 @@ h1, h2, h3, h4, h5, h6, p {
 .btn-detail {
     position: relative;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     overflow: hidden;
     /* исходный цвет - #6c8b69 */
     border: 2px solid #91ba8d;
@@ -407,6 +394,12 @@ h1, h2, h3, h4, h5, h6, p {
 /* content */
 /* в content содержатся стили для списка всех публикаций и конкретных записей */
 
+.posts {
+    position: relative;
+    top: 100px;
+    margin-bottom: 150px;
+}
+
 .post-date {
 	margin-bottom: 20px;
 	text-align: center;
@@ -438,6 +431,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 .post-item:last-child {
 	margin-bottom: 50px;
+}
+
+.post-item.detailed {
+    position: relative;
+    top: 100px;
 }
 
 .post-text-short {
@@ -491,6 +489,8 @@ h1, h2, h3, h4, h5, h6, p {
 /* about page */
 
 .about {
+    position: relative;
+    top: 100px;
     margin-top: 50px;
 }
 

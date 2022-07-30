@@ -4,13 +4,8 @@
 
 {% block content %}
 
-<div class="intro-detail" id="intro-detail-list">
-	
-</div>
-
 <div class="posts">
 	<div class="container">
-		<p id="max-value">{{count}}</p>
 		{% for i in object_list %}
 			<div class="post-item">
 				<div class="post-date">
@@ -26,7 +21,8 @@
 </div>
 
 <script>
-	(document.getElementById("nav-list")).classList.add("active");
+	document.getElementById("nav-list").classList.add("active");
+	document.getElementById("header").classList.add("with-bg");
 </script>
 
 {% endblock content %}

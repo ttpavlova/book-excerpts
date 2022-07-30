@@ -13,7 +13,7 @@ function countAmountOfPages() {
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+    return Math.floor(Math.random() * (max - min + 1)) + min; // максимум и минимум включаются
 }
 
 // функция перехода на рандомную статью
@@ -64,47 +64,31 @@ function changeLangForRu() {
     }
 }
 
-// jquery
+setHeaderToFixed();
 
-$(function() {
-    var header = $("#header"),
-        introL = $("#intro-detail-list").innerHeight(),
-        introP = $("#intro-detail-post").innerHeight(),
-        introA = $("#intro-detail-about").innerHeight(),
-        scrollOffset = $(window).scrollTop();
+// make the header fixed at the top of the page after some scroll
+function setHeaderToFixed() {
+    let header = document.getElementById("header");
+    let headerHeight = header.offsetHeight;
+    let scrollOffset = document.documentElement.scrollTop;
 
-    // fixed header
-
-    checkScroll(scrollOffset);
-
-    $(window).on("scroll", function() {
-        scrollOffset = $(this).scrollTop();
-
+    window.addEventListener("scroll", function(e) {
+        scrollOffset = window.scrollY;
         checkScroll(scrollOffset);
     });
 
-    function checkScroll(scrollOffset) {     
-        if ((scrollOffset >= introL) || (scrollOffset >= introP) || (scrollOffset >= introA)) {
-            header.addClass("fixed");
-        }
-        else {
-            header.removeClass("fixed");
+    function checkScroll(scrollOffset) {
+        if (scrollOffset >= headerHeight) {
+            header.classList.add("fixed");
+        } else {
+            header.classList.remove("fixed");
         }
     }
+}
 
-    // smooth scroll
+// jquery
 
-    $("[data-scroll]").on("click", function(event) {
-        event.preventDefault();
-
-        var blockId = $(this).data("scroll"),
-            blockOffset = $(blockId).offset().top;
-
-        $("html, body").animate({
-            scrollTop: blockOffset
-        }, 500);
-    });
-
+$(function() {
     // menu nav toggle
 
     $("#nav-toggle").on("click", function(event) {
