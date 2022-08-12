@@ -23,12 +23,12 @@ From your command line:
 $ git clone https://github.com/ttpavlova/book-excerpts.git
 ```
 
-First of all, you need to set up a virtual environment. It will isolate your Python/Django setup for each project. This means that any changes you make to one website won't affect any others you're also developing. In your Python\Scripts folder:
+First of all, you need to set up a virtual environment. It will isolate your Python/Django setup for each project. In your Python\Scripts folder:
 ```
 # install virtualenv
 ...\> pip install virtualenv
 ```
-To create a virtual environment for your project, open a new command prompt, navigate to the folder where you want to create your project and then enter the following:
+To create a virtual environment, navigate to the folder where you want to create your project and then enter the following:
 ```
 # start virtualenv
 ...\> python -m venv project-name
